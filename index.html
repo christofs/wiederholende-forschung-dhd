@@ -29,116 +29,174 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 
 <body>
 <div class="reveal">
-<!-- THIS IS WHERE THE CONTENT GOES! -->
-<!-- Any section element inside of this container is displayed as a slide -->
 <div class="slides">
-
-
-
-<section data-markdown>
+<section data-markdown="" data-separator="^\n---\n" data-separator-vertical="^\n--\n" data-charset="utf-8">
 <script type="text/template">
+
+<!--  vvvvv THIS IS WHERE THE CONTENT GOES! vvvvvvv  -->
+
+
+
 ## Wiederholende Forschung in den digitalen Literaturwissenschaften
 <hr/>
 <br/>
 <br/>
-<p>Jahrestagung des DHd-Verbands, Bern, Februar 2017</p>
+<br/>
+Christof Schöch, Würzburg
+<br/>
 <br/>
 <hr/>
-<p>Dr. Christof Schöch<br/>CLiGS - Universität Würzburg</p>
+<small>[Jahrestagung des DHd-Verbands 2017 "Digitale Nachhaltigkeit"](http://www.dhd2017.ch/)</small>
+<br/>
+<small>Bern, 13.-18. Februar 2017</small>
 <p><img height="50" data-src="img/basics/UWUE.jpg"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="100" data-src="img/basics/CLiGS.jpg"></img>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<img height="50" data-src="img/basics/BMBF.jpg"></img></p>
-</script>
-</section>
 
-
-<section data-markdown>
-<script type="text/template">
+---
 ## Überblick
-1. Wiederholende Forschung
-2. Fallstudie: Simenon
-3. Fallstudie: Racine
-4. Fazit
-</script>
-</section>
+* [Wiederholende Forschung](#/2)
+* [Erste Fallstudie: Simenon](#/3)
+* [Zweite Fallstudie: Racine](#/4)
+* [Fazit](#/5)
 
 
+---
+# Wiederholende <br/>Forschung
 
-<section>
-    
-<section data-markdown>
-<script type="text/template">
-# 1. Wiederholende <br/>Forschung
-</script>
-</section>
-
-<section data-markdown>
-<script type="text/template">
+--
 ## Wiederholende Forschung
-<p><a href="img/wiederholende-forschung.png"><img src="img/wiederholende-forschung.png" height="500"></img></a></p>
-</script>
-</section>
+<br/>
+* die "reproducibility crisis"
+* Wiederholbare und wiederholende Forschung
+* Digital Humanities ist (oft) wiederholende Forschung
+* Verhältnis von D und H unter dem Mikroskop
+* Inhaltlicher und methodischer Erkenntnisgewinn
+
+--
+## Wiederholungsstudien in den DH
+<br/>
+* Wenden sich einer bereits behandelten Fragestellung mit digitalen Daten und computergestützten Methoden erneut zu
+* Vielfältiges Verhältnis zwischen ursprünglicher und wiederholender Studie
+* Entscheidende Faktoren: Fragestellung, Daten, Methoden
+
+--
+## Konzeptuelles Feld
+<p><a href="img/wiederholende-forschung.png"><img src="img/wiederholende-forschung.png" height="550"></img></a></p>
+
+---
+# Erste Fallstudie: <br/>Simenon
 
 
-</section>
-<section>
-    
-<section data-markdown>
-<script type="text/template">
-# 2. Fallstudie: <br/>Simenon
-</script>
-</section>
+---
+# Zweite Fallstudie: <br/>Racine
 
+--
+## Kontext: Spitzer und Racine
+<br/>
+* Jean Racine (1639-1699), französischer Dramatiker
+* Leo Spitzer (1887-1960), österreichischer Romanist
+* Artikel: "Die klassische Dämpfung in Racines Stil", 1928
 
-</section>
-<section>
-    
-<section data-markdown>
-<script type="text/template">
-# 3. Fallstudie: <br/>Racine
-</script>
-</section>
+--
+## Klassische Dämpfung
+<br/>
+* literarisches Stilprinzip
+* musikalische Metapher
+* Wirkmächtig: hat Bild von Racine und Klassik geprägt
+* Epochenstil vs. Autorenstil
 
-<section data-markdown>
-<script type="text/template">
+--
+## Spitzers Vorgehensweise
+<br/>
+* "Dämpfung": einheitsstiftendes Prinzip
+* aufgefächert in etwa 10 abstrakte Phänomene
+* realisiert in rund 50 verschiedenen stilistische Mustern
+* illustriert mit 484 Beispielen aus 11 Tragödien Racines
+
+--
+## Wiederholungsstudie
+<br/>
+* von Spitzer beschriebene und illustrierte Phänomene operationalisieren
+* in Racines Werk und bei den Zeitgenossen identifizieren
+* quantitative Hinweise auf die Frage nach Autorstil / Epochenstil
+
+--
+## Textsammlung
+<br/>
+* Tragödien: 11 x Racine + 38 x Zeitgenossen
+* Quelle: http://www.theatre-classique.fr 
+* XML-Format mit morphologischer und semantischer Annotation
+* Workflow: TEI + Freeling + NLTK + WordNet + Python + TXM/CQP
+
+--
+## Beispiel: das entgrenzende 'où'
+<br/>
+>Zur Konturverwischung trägt auch bei das entgrenzende 'où' ("wo"), das besonders gern bei Abstrakten eintritt, bei denen man sich schwer eine Örtlichkeit, einen umzirkten Raum denken kann, in den das Wo eindringen könnte; (S. 168)
+
+--
+## "où": Beispiele bei Spitzer
+<br/>
+* _"...cette mort où je cours,"_
+* _"...la honte où je suis descendue."_
+* _"...les déplaisirs où son âme se noie."_
+<br/>
+<br/>
+* _"... diesen Tod, dem ich entgegenstrebe,"_
+* _"...die Schmach, zu der ich abgesunken bin."_
+* "_...die Ungemach, in der seine Seele ertrinkt."_ 
+
+--
 ## TXM-Query
-<p><a href="img/txm-query.png"><img src="img/txm-query.png" height="500"></img></a></p>
-</script>
-</section>
+<a href="img/txm-query.png"><img src="img/txm-query.png" height="500"></img></a>
+<small>Racine + Zeitgenossen; Genauigkeit?</small>
+
+--
+## Racine/Zeitgenossen
+<a href="img/signifikanz.svg"><img src="img/signifikanz.svg" height="500"></img></a>
+<small>30 von 50 Phänomenen; über-/unterrepräsentiert; grün=signifikant (rank-sum test)</small>
+
+--
+## Schlussfolgerungen
+* die "Dämpfung" ist ein Epochenstil, kein Autorenstil!
+* Modellierung der stilistischen Muster ist schwierig
+* Stärken und Grenzen beider Studien
+
+---
+# Fazit
+
+--
+## Referenzen
+<small>
 
 
-</section>
-<section>
-    
-<section data-markdown>
-<script type="text/template">
-# 4. Fazit
-</script>
-</section>
 
 
-</section>
-<section>
+</small>
 
-<section data-markdown>
-<script type="text/template">
+
+---
 <br/>
 <br/>
-###Vielen Dank!
+##Vielen Dank!
 <br/>
 <br/>
 <br/>
 <br/>
-<p>Christof Schöch, 2017</p>
-<p>http://www.christof-schoech.de</p>
+<br/>
 <hr/>
-<p><a href="https://creativecommons.org/licenses/by/4.0/">Lizenz: CC-BY 4.0</a></p>
+<br/>
+<small>[Christof Schöch](http://www.christof-schoech.de)<br/>[CC-BY 4.0](https://creativecommons.org/licenses/by/4.0/), 2017</small>
+
+
+
+
+<!--^^^^^^^ DON'T TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING :-) ^^^^^^^-->
+
 </script>
 </section>
-
-</section>
-
-
-<!-- DON'T TOUCH UNLESS YOU KNOW WHAT YOU'RE DOING :-) -->
 </div>
+</div>
+
+
 <script src="lib/js/head.min.js"></script>
 <script src="js/reveal.js"></script>
 <script>
