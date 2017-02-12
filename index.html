@@ -99,9 +99,10 @@ Christof Schöch, Würzburg
 --
 ## Richeaudeaus Thesen
 <br/>
+* Simenon verwendet vergleichsweise kurze Sätze
 * Kein Unterschied zwischen Maigret-Krimis und psychologischen Romanen
-* Simenon verwendet ungewöhnlich kurze Sätze
-* Zudem: autobiographische Schriften; Proust; Giono
+<br/>
+<a href="img/richeaudeau_table-des-25.png"><img src="img/richeaudeau_table-des-25.png" height="350" align="right"></img></a>
 
 --
 ## Richeaudeaus Ergebnisse
@@ -116,8 +117,8 @@ Durchschnittliche Satzlänge in Wörtern
 | Simenon, psychol. Romane    |           13,2       | 
 | Simenon, autobiogr. Texte   |           18,4       | 
 | &nbsp;                      |                      | 
-| Giono, Romane               |           15,0       | 
-| Proust, Recherche           |           43,3       | 
+| Jean Giono                  |           15,0       | 
+| Marcel Proust               |           43,3       | 
 
 
 --
@@ -127,28 +128,34 @@ Durchschnittliche Satzlänge in Wörtern
 | Textgruppe                  |    Anzahl der Texte  |
 | --------------------------- |:--------------------:|
 | Richeaudeaus Simenon-Texte  |             25       | 
-| weitere Texte von Simenon   |            103       | 
-| weitere zeitg. Romane       |            475       | 
-| Summe                       |            603       | 
+| weitere Texte von Simenon   |            102       | 
+| weitere zeitg. Romane       |            500       | 
+| Summe                       |            627       | 
 
 --
 ## Wiederholungsstudie: Vorgehen
 <br/>
-* (keine explizite Definition bei Richeaudeau; aber siehe Richeaudeau 1984)
-* Satz-Segmentierung mit NLTK (auf _Le Monde_ trainiertes Modell)
-* Wörter = getrennt durch "\W" (Ausnahmen: "peut-être", "aujourd'hui", etc.)
-* Mittelwert, Median, Verteilung werden erhoben
-* Statistische Signifikanztests zum Vergleich der Verteilungen
+* Satz-Segmentierung mit NLTK
+* Tokenisierung mit RegEx ("\W"; Ausnahmen)
+* Mittelwert, Median, Verteilung pro Roman
+* Visualisierung und Signifikanztests
 
 
 --
-## Ergebnisse: Simenon 
+## Richeadeaus 25 Texte 
+<a href="img/sentlen-simenon_25.svg"><img src="img/sentlen-simenon_25.svg" height="500"></img></a>
+<br/>
+<small>Maigret vs. Romane: Welch 0.01; Mann-Whitney 0.59<br/>Maigret vs. Autobio: Welch 0.0001, Mann-Whitney 0.005</small>
+
+
+--
+## Erweiterte Simenon-Sammlung 
 <a href="img/sentlen-simenon_127.svg"><img src="img/sentlen-simenon_127.svg" height="500"></img></a>
 <br/>
 <small>Alle Verteilungen sind signifikant unterschiedlich.</small>
 
 --
-## Ergebnisse: Simenon vs. Zeitgenossen
+## Simenon vs. Zeitgenossen
 <a href="img/sentlen-romans_101+252.svg"><img src="img/sentlen-romans_101+252.svg" height="500"></img></a>
 <br/>
 <small>Welch's t-Test: p-Wert 0.00004; Mann-Whitney: p-Wert 0.52.</small>
@@ -156,9 +163,14 @@ Durchschnittliche Satzlänge in Wörtern
 --
 ## Zwischenbilanz
 <br/>
-* Explizite Definition von Satz und Wort
-* Erst mehr Daten machen Aussagen möglich
-* Rolle statistischer Tests 
+* a) 25 Richeaudeau-Texte <!-- .element: class="fragment" data-fragment-index="1" -->
+    * gleiche Frage, Daten, fast gleiche Methode <!-- .element: class="fragment" data-fragment-index="1" -->(=[Replikation](#/2/3))
+    * Modellierung: Definition von Satz und Wort
+    * letztlich zu wenig Daten
+* b) 127/352 Texte  <!-- .element: class="fragment" data-fragment-index="2" -->
+    * gleiche Frage, fast gleiche Methode, andere Daten <!-- .element: class="fragment" data-fragment-index="2" -->(=[Reproduktion](#/2/3))
+    * Datenmenge und Signifikanztests
+    * Ergebnisse sprechen eher gegen Richeaudeaus Thesen
 
 ---
 <br/>
@@ -205,7 +217,7 @@ Durchschnittliche Satzlänge in Wörtern
 --
 ## Beispiel: das entgrenzende 'où'
 <br/>
->Zur Konturverwischung trägt auch bei das entgrenzende 'où' ("wo"), das besonders gern bei Abstrakten eintritt, bei denen man sich schwer eine Örtlichkeit, einen umzirkten Raum denken kann, in den das Wo eindringen könnte; (S. 168)
+<a href="img/spitzer_entgrenzendes-où-168.png"><img src="img/spitzer_entgrenzendes-où-168.png" height="450"></img></a>
 
 --
 ## "où": Beispiele bei Spitzer
@@ -222,18 +234,20 @@ Durchschnittliche Satzlänge in Wörtern
 --
 ## TXM-Query
 <a href="img/txm-query.png"><img src="img/txm-query.png" height="500"></img></a>
-<small>Racine + Zeitgenossen; Genauigkeit?</small>
+<small>Hier: Racine + Zeitgenossen<br/>Genauigkeit: alle Beispiele; nur passende Treffer?</small>
 
 --
-## Racine/Zeitgenossen
+## Racine vs. Zeitgenossen
 <a href="img/signifikanz.svg"><img src="img/signifikanz.svg" height="500"></img></a>
 <small>30 von 50 Phänomenen; über-/unterrepräsentiert; grün=signifikant (rank-sum test)</small>
 
 --
-## Schlussfolgerungen
-* "Dämpfung" ist ein Epochenstil, kein Autorenstil!
-* Zentrale Herausforderung: Modellierung der stilistischen Muster
-* Stärken und Grenzen beider Studien
+## Zwischenbilanz
+<br/>
+* a) Racine-Texte: gleiche Frage, gleiche Daten, andere Methode<!-- .element: class="fragment" data-fragment-index="1" --> (=[Reanalyse](#/2/3)) <!-- .element: class="fragment" data-fragment-index="1" -->
+* b) Racine+Zeitgenossen: gleiche Frage, erweiterte Daten, andere Methode  <!-- .element: class="fragment" data-fragment-index="1" -->(=[Nachfolgeforschung](#/2/3)) <!-- .element: class="fragment" data-fragment-index="1" -->
+* "Dämpfung" ist ein Epochenstil, kein Autorenstil! <!-- .element: class="fragment" data-fragment-index="2" -->
+* Zentrale Herausforderung: Modellierung der stilistischen Muster <!-- .element: class="fragment" data-fragment-index="2" -->
 
 ---
 <br/>
@@ -242,8 +256,10 @@ Durchschnittliche Satzlänge in Wörtern
 --
 ## Fazit
 <br/>
-* Richeaudeau: mehr Daten, mehr statistische Tests
-* Spitzer: mehr Daten, statistische Tests; Modellierungsproblem
+* Originalstudien nicht auf Wiederholbarkeit angelegt
+* Eigenheiten von Original- und Wiederholungsstudie werden deutlich
+* Bezug zwischen Original- und Wiederholungsstudie (Daten, Methode, Fragestellung)
+* Kontinuitätsfrage: quantitative vs qualitative DH
 
 --
 ## Daten, Code, Plots
@@ -266,6 +282,39 @@ Communication et langages 53: 11–32 10.3406/colan.1982.1484.
 * Schöch, Christof (2016): „Does Short Sell Better? Belgian Author George Simenon’s use of sentence length“, in: The Dragonfly’s Gaze, <https://dragonfly.hypotheses.org/922> und <http://
 dragonfly.hypotheses.org/1005>.
 * Spitzer, Leo ([1928]): „Die klassische Dämpfung in Racines Stil“, in: Romanische Stil- und Literaturstudien I. Marburg: Elwert (1931), 135–268.
+
+</small>
+
+--
+## Bonus: Simenon vs. 1900-2015 
+<a href="img/sentlen-romans_101+500.svg"><img src="img/sentlen-romans_101+500.svg" height="500"></img></a>
+<br/>
+<small>Verteilungen sind signifikant unterschiedlich.</small>
+
+--
+## Bonus: "querydoc" (XML)
+<small>
+
+* **metadata**
+    * study
+    * data
+    * method 
+* **main**
+    * div @xml:id
+        * label
+        * queryGroup @xml:id
+            * label
+            * comments 
+            * ref @key
+            * query @xml:id
+                * label
+                * queryString @type
+                * comments
+                * ref @key
+* **references**
+    * record
+        * key
+        * bibl 
 
 </small>
 
