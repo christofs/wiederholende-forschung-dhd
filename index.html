@@ -62,22 +62,30 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );
 <br/>
 # Wiederholende <br/>Forschung
 
+
+--
+## Reproducibility crisis
+<a href="img/nature-reproducibility.png"><img src="img/nature-reproducibility.png" height="500" align="middle"></img></a>
+<br/>
+<small>Quelle: Nature-Umfrage (Baker 2016)</small>
+
 --
 ## Wiederholende Forschung
 <br/>
-* die "reproducibility crisis"
-* Wiederholbare und wiederholende Forschung
-* Digital Humanities ist (oft) wiederholende Forschung
-* Kontinuität des gw. Diskurses
-* Verhältnis von D und H unter dem Mikroskop
-* Inhaltlicher und methodischer Erkenntnisgewinn
+* Wiederholbare / wiederholende Forschung <!-- .element: class="fragment" data-fragment-index="1" -->
+* Digital Humanities als wiederholende Forschung <!-- .element: class="fragment" data-fragment-index="2" -->
+* Kontinuität des gw. Diskurses <!-- .element: class="fragment" data-fragment-index="3" -->
+* Verhältnis von D und H unter dem Mikroskop <!-- .element: class="fragment" data-fragment-index="4" -->
+* Inhaltlicher / methodischer Erkenntnisgewinn  <!-- .element: class="fragment" data-fragment-index="5" -->
+
 
 --
-## Wiederholungsstudien in den DH
+## Wiederholungsstudien
 <br/>
-* Wiederholen eine frühere Untersuchung mit digitalen Mitteln
-* Vielfältiges Verhältnis zwischen ursprünglicher und wiederholender Studie
-* Entscheidende Faktoren: Fragestellung, Daten, Methoden
+* Untersuchung, die in einem unmittelbaren Bezug zu einer früheren Forschungsarbeit steht <!-- .element: class="fragment" data-fragment-index="1" -->
+* Vielfältiges Verhältnis: ursprüngliche / wiederholende Untersuchung <!-- .element: class="fragment" data-fragment-index="2" -->
+* Faktoren: Fragestellung, Daten, Methoden <!-- .element: class="fragment" data-fragment-index="3" -->
+* gleich / verändert (und: digital) <!-- .element: class="fragment" data-fragment-index="4" -->
 
 --
 ## Konzeptuelles Feld
@@ -109,21 +117,17 @@ Durchschnittliche Satzlänge in Wörtern
 <br/>
 <br/>
 
-| Textgruppe                  |    Satzlänge         |
-| --------------------------- |:--------------------:|
-| Simenon, Maigret-Krimis     |           12,5       | 
-| Simenon, psychol. Romane    |           13,2       | 
-| Simenon, autobiogr. Texte   |           18,4       | 
-| &nbsp;                      |                      | 
-| Jean Giono                  |           15,0       | 
-| Marcel Proust               |           43,3       | 
+| Texte     |                             |    Satzlänge         |
+|-----------| --------------------------- |:--------------------:|
+| Simenon   | Maigret-Krimis<br/>psychol. Romane<br/>autobiogr. Texte | 12,5<br/>13,2<br/>18,4   | 
+| Vergleich | Jean Giono<br/>Marcel Proust|        15,0<br/>43,3 |   
 
 
 --
 ## Wiederholungsstudie: Textsammlung
 <br/>
 
-|    | Textgruppe                  |    Anzahl der Texte  |
+|    | Texte                       |    Anzahl der Texte  |
 |----| --------------------------- |:--------------------:|
 | a) | Richeaudeaus Simenon-Texte  |             25       | 
 | b) | weitere Texte von Simenon<br/>weitere zeitg. Romane   |            102<br/>500       | 
@@ -139,7 +143,7 @@ Durchschnittliche Satzlänge in Wörtern
 
 
 --
-## Richeadeaus 25 Texte 
+## Richeaudeaus 25 Texte 
 <a href="img/sentlen-simenon_25.svg"><img src="img/sentlen-simenon_25.svg" height="500"></img></a>
 <br/>
 <small>Maigret vs. psychol. Romane: Welch 0.01; Mann-Whitney 0.59<br/>Maigret vs. Autobio: Welch 0.0001, Mann-Whitney 0.005</small>
@@ -161,7 +165,7 @@ Durchschnittliche Satzlänge in Wörtern
 ## Zwischenbilanz
 <br/>
 * a) 25 Richeaudeau-Texte <!-- .element: class="fragment" data-fragment-index="1" -->
-    * gleiche Frage, Daten, fast gleiche Methode <!-- .element: class="fragment" data-fragment-index="1" -->(=[Replikation](#/2/3))
+    * gleiche Frage und Daten, fast gleiche Methode <!-- .element: class="fragment" data-fragment-index="1" -->(=[Replikation](#/2/3))
     * Modellierung: Definition von Satz und Wort
     * letztlich zu wenig Daten
 * b) 127/353 Texte  <!-- .element: class="fragment" data-fragment-index="2" -->
@@ -231,14 +235,14 @@ Durchschnittliche Satzlänge in Wörtern
 --
 ## TXM-Query (Racine + Zeitgenossen)
 <a href="img/txm-query.png"><img src="img/txm-query.png" height="500"></img></a>
-<small>Query: [wnlex="noun.feeling"|lemma="coeur|honte|...][lemma="où"]</small>
+<small>Query: [wnlex="noun.feeling"|lemma="coeur|honte|...][form=","]?[lemma="où"]</small>
 <br/>
 <small>Genauigkeit: alle Spitzer-Beispiele? Treffer passen zur Definition?</small>
 
 --
 ## Racine vs. Zeitgenossen
 <a href="img/signifikanz.svg"><img src="img/signifikanz.svg" height="500"></img></a>
-<small>30 von 50 Phänomenen; über-/unterrepräsentiert; grün=signifikant (rank-sum test)</small>
+<small>Verhältnis der Mittelwerte (Racine vs. Zeitgenossen): 30 von 50 Phänomene;<br/>Bei Racine über-/unterrepräsentiert; grün=signifikant (rank-sum test)</small>
 
 --
 ## Zwischenbilanz
@@ -257,10 +261,10 @@ Durchschnittliche Satzlänge in Wörtern
 --
 ## Fazit
 <br/>
-* Originalstudien nicht auf Wiederholbarkeit angelegt <!-- .element: class="fragment" data-fragment-index="1" --> 
-* Eigenheiten von Original- und Wiederholungsstudie werden deutlich <!-- .element: class="fragment" data-fragment-index="2" --> 
-* Bezug zwischen Original- und Wiederholungsstudie (Daten, Methode, Fragestellung) <!-- .element: class="fragment" data-fragment-index="3" --> 
-* Kontinuitätsfrage: quantitative vs qualitative DH <!-- .element: class="fragment" data-fragment-index="4" --> 
+* (Analoge) Originalstudien nicht auf Wiederholbarkeit angelegt <!-- .element: class="fragment" data-fragment-index="1" --> 
+* Bezug Original- / Wiederholungsstudie (Daten, Methode, Fragestellung): nicht binär <!-- .element: class="fragment" data-fragment-index="2" --> 
+* Eigenheiten von Original- und Wiederholungsstudie werden deutlich <!-- .element: class="fragment" data-fragment-index="3" --> 
+* Kontinuitätsfrage: Distanz / Nähe wird jeweils sichtbar <!-- .element: class="fragment" data-fragment-index="4" --> 
 
 --
 ## Daten, Code, Plots
